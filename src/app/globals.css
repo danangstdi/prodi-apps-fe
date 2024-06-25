@@ -2,32 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@layer base {
+  @font-face {
+    font-family:Poppins;
+    src:url('../../public/font/Poppins.ttf')
+  }
+  
+  @font-face {
+    font-family:PoppinsBold;
+    src:url('../../public/font/Poppins-Bold.ttf')
+  }
 
-@media (prefers-color-scheme: dark) {
+  * {
+    font-family: Poppins
+  }
+
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --swiper-pagination-color: rgb(34, 54, 75);
+    --swiper-pagination-bullet-inactive-color: whitesmoke;
+    --swiper-pagination-bullet-inactive-opacity: 0.8;
+    --swiper-pagination-bullet-opacity: 1;
+    --color-primary: rgb(34, 54, 75);
+    --color-secondary: rgb(51, 77, 105);
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer utilities {
+  .poppins-bold {
+    font-family: PoppinsBold;
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+/* Swiper */
+.swiper-pagination-bullet {
+  padding: .2rem 1.5rem;
+  border-radius: 50rem !important;
+  border: solid 1.5px var(--color-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper-pagination-bullet-active::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: whitesmoke;
+  animation: anjay 4s forwards linear;
+  transition-duration: 4s;
+}
+
+@keyframes anjay {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%)
   }
 }
