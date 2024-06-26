@@ -40,7 +40,7 @@ export default function Navbar() {
           Masuk
         </Link>
       </div>
-      <nav className={`${isScrolled && 'fixed top-0 inset-x-0 z-20 bg-opacity-80 backdrop-blur-md'} flex items-center justify-between bg-slate-100 px-5 py-2 xl:px-32`}>
+      <nav className={`${isScrolled && 'fixed top-0 inset-x-0 z-20 bg-opacity-80 backdrop-blur-md shadow-lg'} flex items-center justify-between bg-slate-100 px-5 py-2 xl:px-32`}>
         <Image src={Himatika} alt='' className='w-16 h-16' />
         <button className='lg:hidden'>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/></svg>

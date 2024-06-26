@@ -9,7 +9,7 @@ export default function Announcement() {
         <hr className='border-2 border-blue-800 lg:mr-10' />
       </div>
       <Link href='' >
-        <article className="py-2 pr-5 group">
+        <article className="py-2 lg:pr-10 group">
           <h1 className="font-semibold text-sm line-clamp-1 group-hover:text-slate-700 group-hover:duration-150">
             [SA] Informasi Perkuliahan dan Kode Enroll MK Semester Antara 2024
           </h1>
@@ -22,7 +22,7 @@ export default function Announcement() {
         </article>
       </Link>
       <Link href='' >
-        <article className="py-2 pr-5 group">
+        <article className="py-2 lg:pr-10 group">
           <h1 className="font-semibold text-sm line-clamp-1 group-hover:text-slate-700 group-hover:duration-150">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates tempora dolore officiis error sint esse eum vitae cupiditate hic quasi!
           </h1>
@@ -35,7 +35,7 @@ export default function Announcement() {
         </article>
       </Link>
       <Link href='' >
-        <article className="py-2 pr-5 group">
+        <article className="py-2 lg:pr-10 group">
           <h1 className="font-semibold text-sm line-clamp-1 group-hover:text-slate-700 group-hover:duration-150">
             [SA] Informasi Perkuliahan dan Kode Enroll MK Semester Antara 2024
           </h1>

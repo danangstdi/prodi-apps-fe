@@ -10,7 +10,7 @@ export default function page() {
           <div>
             <h5 className="text-2xl poppins-bold mb-3">Visi</h5>
             <p className="ml-10">
-              Menjadi Fakultas yang berdaya saing internasional dan berkontribusi kepada pengembangan Teknologi Informasi dan Ilmu Komputer untuk menunjang industri dan masyarakat dengan menyelaraskan pelaksanaan Pendidikan, Penelitian, dan Pengabdian kepada Masyarakat
+              Menjadi Program Studi yang berdaya saing internasional dan berkontribusi kepada pengembangan Teknologi Informasi dan Ilmu Komputer untuk menunjang industri dan masyarakat dengan menyelaraskan pelaksanaan Pendidikan, Penelitian, dan Pengabdian kepada Masyarakat
             </p>
           </div>
           <hr  className="border-2"/>
