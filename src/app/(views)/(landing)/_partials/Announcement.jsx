@@ -3,7 +3,7 @@ import Link from "next/link"
 export default function Announcement() {
   return (
     <section className='lg:col-span-2'>
-      <h3 className='font-bold text-4xl'>Pengumuman</h3>
+      <h3 className='font-bold text-4xl'>Jurnal</h3>
       <div className='mt-3 mb-5'>
         <hr className='border-2 border-blue-800 w-1/3 lg:mr-10' />
         <hr className='border-2 border-blue-800 lg:mr-10' />

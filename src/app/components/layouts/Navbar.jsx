@@ -10,7 +10,7 @@ export default function Navbar() {
 
   const listMenu = [
     {page: 'Tentang Kami', link: '/biografi'},
-    {page: 'Berita', link: '/'},
+    {page: 'Berita', link: '/news'},
     {page: 'Event', link: '/'},
     {page: 'Jurnal', link: '/'},
     {page: 'Kontak Kami', link: '/'},
