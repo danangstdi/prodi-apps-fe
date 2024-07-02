@@ -1,6 +1,6 @@
 import Footer from "@/app/components/layouts/Footer";
 import Navbar from "../../components/layouts/Navbar";
-import Announcement from "./_partials/Announcement";
+import Announcement from "./_partials/Journal";
 import Event from "./_partials/Event";
 import Hero from "./_partials/Hero";
 import News from "./_partials/News";
@@ -9,7 +9,7 @@ import News from "./_partials/News";
 export default function Home() {
   return (
     <>
-      <Navbar/>
+      <Navbar active="Beranda"/>
       <Hero/>
       {/* <Part/> */}
       <News/>

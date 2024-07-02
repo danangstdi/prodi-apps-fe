@@ -9,7 +9,7 @@ export default async function News() {
 
   return (
     <>
-      <Navbar />
+      <Navbar active="Berita"/>
       <main className="px-10 py-16">
         <h3 className='font-bold text-4xl'>Semua Berita</h3>
         <div className='mt-3 mb-5'>

@@ -4,7 +4,7 @@ import Navbar from "@/app/components/layouts/Navbar"
 export default function page() {
   return (
     <>
-      <Navbar/>
+      <Navbar active="Tentang Kami"/>
       <main className="px-4 md:mx-20 lg:mx-36 xl:mx-80">
         <div className="py-10 flex flex-col gap-10">
           <div>
