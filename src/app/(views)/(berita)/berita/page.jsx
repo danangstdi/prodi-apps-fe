@@ -1,11 +1,11 @@
 import Navbar from "@/app/components/layouts/Navbar";
-import Card from "../../_partials/Card";
-import Footer from "@/app/components/layouts/Footer";
-import Pagination from "../../_partials/Pagination";
+import Card from "./_partials/Card";
 import { getArticle } from "@/app/services/getArticle";
+import Footer from "@/app/components/layouts/Footer";
+import Pagination from "../semua-berita/_partials/Pagination";
 
-export default async function News({params: {currentPagination}}) {
-  const allArticles = await getArticle(`?page=${currentPagination}`);
+export default async function News() {
+  const allArticles = await getArticle();
 
   return (
     <>

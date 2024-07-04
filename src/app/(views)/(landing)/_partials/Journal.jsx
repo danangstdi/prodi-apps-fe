@@ -7,7 +7,7 @@ export default async function Announcement() {
     <section className="lg:col-span-2">
       <div className="flex justify-between">
         <h3 className="font-bold text-4xl">Jurnal</h3>
-        <Link href='/news' className="border-2 border-indigo-600 py-2 px-6 text-indigo-600 text-sm hover:text-white hover:bg-indigo-600 hover:duration-150 lg:mr-10">
+        <Link href='/semua-jurnal' className="border-2 border-indigo-600 py-2 px-6 text-indigo-600 text-sm hover:text-white hover:bg-indigo-600 hover:duration-150 lg:mr-10">
           Selengkapnya
         </Link>
       </div>
@@ -16,7 +16,7 @@ export default async function Announcement() {
         <hr className="border-2 border-blue-800 lg:mr-10" />
       </div>
       {journals.data.data.map((journal) => (
-        <Link href={`/journal/${journal.url}`} key={journal.hash}>
+        <Link href={`/jurnal/${journal.url}`} key={journal.hash}>
           <article className="py-2 lg:pr-10 group">
             <h1 className="font-semibold text-sm line-clamp-1 group-hover:text-slate-700 group-hover:duration-150">
               {journal.title}

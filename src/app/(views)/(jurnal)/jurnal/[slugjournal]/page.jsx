@@ -7,7 +7,7 @@ export default async function page({params: {slugjournal}}) {
   const journal = await getSingleJournal(slugjournal);
   return (
     <>
-      <Navbar activity="Jurnal"/>
+      <Navbar active="Jurnal"/>
       <main className="py-14 px-4 md:mx-20 lg:mx-36 xl:mx-80">
           <div className="flex gap-2">
             <div className="border-2 border-indigo-500 bg-indigo-500 w-fit py-1 text-white px-4 text-sm">

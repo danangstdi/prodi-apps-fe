@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Card(props) {
   return (
-    <Link href={`/news/${props.href}`} className="group mt-5 md:mt-0">
+    <Link href={`/berita/${props.href}`} className="group mt-5 md:mt-0">
       <img
         src={props.img}
         alt=""

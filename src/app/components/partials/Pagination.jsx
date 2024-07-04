@@ -1,10 +1,10 @@
 "use client"
 import { useRouter } from "next/navigation";
 
-export default function Pagination({ totalPages, currentPage }) {
+export default function Pagination({ totalPages, currentPage, href }) {
   const router = useRouter();
   const pages = [];
-  const maxVisiblePages = 4;
+  const maxVisiblePages = 10;
 
   pages.push(1);
 
@@ -41,11 +41,11 @@ export default function Pagination({ totalPages, currentPage }) {
 
   const handlePageChange = (page) => {
     if (page < 1 || page > totalPages) return;
-    router.push(`/news/page/${page}`);
+    router.push(`/${href}/${page}`);
   };
 
   return (
-    <div className="col-span-2 lg:col-span-4 flex justify-end gap-2">
+    <div className="col-span-2 lg:col-span-4 flex justify-center gap-2 my-4">
       <button
         onClick={() => handlePageChange(currentPage - 1)}
         disabled={currentPage === 1}

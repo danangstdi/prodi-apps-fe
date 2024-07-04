@@ -1,8 +1,8 @@
 import Navbar from "@/app/components/layouts/Navbar";
-import Card from "./_partials/Card";
 import { getArticle } from "@/app/services/getArticle";
 import Footer from "@/app/components/layouts/Footer";
-import Pagination from "./_partials/Pagination";
+import Card from "../berita/_partials/Card";
+import Pagination from "@/app/components/partials/Pagination";
 
 export default async function News() {
   const allArticles = await getArticle();
@@ -27,7 +27,7 @@ export default async function News() {
             />
           ))}
         </div>
-        <Pagination totalPages={allArticles.data.meta.last_page} currentPage={allArticles.data.meta.current_page} />
+        <Pagination href='semua-berita' totalPages={allArticles.data.meta.last_page} currentPage={allArticles.data.meta.current_page} />
       </main>
       <Footer/>
     </>
