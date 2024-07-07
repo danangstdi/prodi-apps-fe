@@ -1,6 +1,6 @@
 import Footer from "@/app/components/layouts/Footer";
 import Navbar from "@/app/components/layouts/Navbar";
-import { getUtility } from "@/app/services/getFacility";
+import { getUtility } from "@/app/services/getUtility";
 
 export default async function page() {
   const utilites = await getUtility();

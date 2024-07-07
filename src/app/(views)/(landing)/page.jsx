@@ -4,19 +4,19 @@ import Announcement from "./_partials/Journal";
 import Event from "./_partials/Event";
 import Hero from "./_partials/Hero";
 import News from "./_partials/News";
-// import Part from "./_partials/Part";
+import Utility from "./_partials/Utility";
 
 export default function Home() {
   return (
     <>
       <Navbar active="Beranda"/>
       <Hero/>
-      {/* <Part/> */}
       <News/>
-      <div className="grid lg:grid-cols-3 px-5 py-14 xl:px-32">
+      <div className="grid lg:grid-cols-3 px-5 pt-14 xl:px-32">
         <Announcement/>
         <Event/>
       </div>
+      <Utility/>
       <Footer/>
     </>
   );

@@ -133,3 +133,7 @@
   }
 }
 
+.utility-card-shade {
+  border-image: fill 0 linear-gradient(#00000000, #0000005c, #000000a6, #000000bb);  
+}
+
