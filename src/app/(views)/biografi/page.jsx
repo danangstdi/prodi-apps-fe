@@ -1,7 +1,12 @@
 import Footer from "@/app/components/layouts/Footer"
 import Navbar from "@/app/components/layouts/Navbar"
+import { getWebConfig } from "@/app/services/getWebConfig";
 
-export default function page() {
+export default async function page() {
+  const configs = await getWebConfig();
+  const config = configs.data.biography;
+  const lorem = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, quidem! Quos et beatae cupiditate voluptates sequi atque est inventore ab necessitatibus ex, pariatur quaerat esse in illum rem adipisci cum mollitia obcaecati, eum aperiam architecto iusto nisi sed? Perspiciatis, voluptates repellendus doloremque sapiente neque doloribus. Consectetur fugiat nisi necessitatibus ipsam tempora quod assumenda hic dolores. Suscipit possimus dolore asperiores illum optio porro. Laudantium iste, ab odit harum facere perspiciatis. Reprehenderit architecto aliquam, debitis nemo ad iusto odio laborum ex dolorem beatae optio provident asperiores iste, maiores ipsum consequuntur numquam sunt assumenda? Numquam sit dolorum quaerat atque itaque maxime at quisquam."
+  
   return (
     <>
       <Navbar active="Tentang Kami"/>
@@ -10,38 +15,29 @@ export default function page() {
           <div>
             <h5 className="text-2xl poppins-bold mb-3">Visi</h5>
             <p className="ml-10">
-              Menjadi Program Studi yang berdaya saing internasional dan berkontribusi kepada pengembangan Teknologi Informasi dan Ilmu Komputer untuk menunjang industri dan masyarakat dengan menyelaraskan pelaksanaan Pendidikan, Penelitian, dan Pengabdian kepada Masyarakat
+              {config.vision || lorem}
             </p>
           </div>
-          <hr  className="border-2"/>
+          <hr className="border-2"/>
           <div className="">
             <h5 className="text-2xl poppins-bold mb-3">Misi</h5>
-            <ul className="list-decimal ml-10">
-              <li>
-                Menyelenggarakan pendidikan di bidang Teknologi Informasi dan Ilmu Komputer yang berkualitas dan berstandar internasional secara berkelanjutan.
-              </li>
-              <li>
-                Meningkatkan kemampuan sivitas akademika dalam pengembangan penelitian dan pengabdian yang selaras dengan kebutuhan industri dan masyarakat.
-              </li>
-              <li>
-                Mengintegrasikan pengembangan pendidikan, penelitian, dan pengabdian kepada masyarakat yang ditunjang dengan tatakelola organisasi yang transparan, akuntabel, efektif, dan efisien.
-              </li>
-            </ul>
+            <div className="ml-10">
+              {config.mission || lorem}
+            </div>
           </div>
-          <hr  className="border-2"/>
+          <hr className="border-2"/>
+          <div className="">
+            <h5 className="text-2xl poppins-bold mb-3">Sejarah</h5>
+            <div className="ml-10">
+              {config.history || lorem}
+            </div>
+          </div>
+          <hr className="border-2"/>
           <div className="">
             <h5 className="text-2xl poppins-bold mb-3">Tujuan</h5>
-            <ul className="list-decimal ml-10">
-              <li>
-                Menyelenggarakan pendidikan di bidang Teknologi Informasi dan Ilmu Komputer yang berkualitas dan berstandar internasional secara berkelanjutan.
-              </li>
-              <li>
-                Meningkatkan kemampuan sivitas akademika dalam pengembangan penelitian dan pengabdian yang selaras dengan kebutuhan industri dan masyarakat.
-              </li>
-              <li>
-                Mengintegrasikan pengembangan pendidikan, penelitian, dan pengabdian kepada masyarakat yang ditunjang dengan tatakelola organisasi yang transparan, akuntabel, efektif, dan efisien.
-              </li>
-            </ul>
+            <div className="ml-10">
+              {config.goal || lorem}
+            </div>
           </div>
         </div>
       </main>

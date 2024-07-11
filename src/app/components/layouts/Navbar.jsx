@@ -5,7 +5,7 @@ import Himatika from '@/../public/himatika.png'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Navbar({active}) {
+export default function Navbar({active, imgServer}) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpenNav, setIsOpenNav] = useState(false);
 
@@ -45,7 +45,10 @@ export default function Navbar({active}) {
         isOpenNav && <div onClick={() => setIsOpenNav(!isOpenNav)} className='md:hidden fixed inset-0 bg-gray-600 bg-opacity-50 z-40'></div>
       }
       <nav className={`${isScrolled && 'fixed top-0 inset-x-0 z-20 bg-opacity-80 backdrop-blur-md shadow-lg'} flex items-center justify-between bg-slate-100 px-5 py-2 xl:px-32`}>
-        <Image src={Himatika} alt='' className='w-16 h-16' />
+        {imgServer
+        ? <img src={imgServer} alt='' className='w-16 h-16' />
+        : <Image src={Himatika} alt='' className='w-16 h-16' />
+        }
         <button onClick={() => setIsOpenNav(!isOpenNav)} className='md:hidden'>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path fillRule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/></svg>
         </button>
