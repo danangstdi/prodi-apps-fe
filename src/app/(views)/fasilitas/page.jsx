@@ -9,7 +9,7 @@ export default async function page() {
     <>
       <Navbar active="Fasilitas"/>
         <main className="px-4 py-8 lg:px-32 lg:py-20">
-          <h3 className='font-bold text-2xl lg:text-4xl'>Failitas, Saran & Prasarana</h3>
+          <h3 className='font-bold text-2xl lg:text-4xl'>Fasilitas, Saran & Prasarana</h3>
           <div className='mt-3 mb-10'>
             <hr className='border-2 border-blue-800 w-1/5' />
             <hr className='border-2 border-blue-800' />

@@ -6,6 +6,9 @@ import Link from "next/link";
 export default async function Utility() {
   const utilities = await getUtility('?limit=5');
 
+  if (utilities.data.data.length === 0) {
+    return null;
+  }
 
   return (
     // <section className='flex justify-center py-8 px-4'>
@@ -13,7 +16,7 @@ export default async function Utility() {
     //     <Image className="object-cover object-center absolute h-full w-full inset-0" src={Banner}/>
     //   </div>
     // </section>
-    <section className="bg-indigo-600 px-5 py-14 xl:px-32 mt-14">
+    <section className="bg-indigo-600 px-5 py-14 xl:px-32">
       <div className="flex items-center justify-between">
         <h3 className='text-white font-bold text-4xl'>Fasilitas</h3>
         <Link href='/fasilitas' className="border-2 border-white py-2 px-6 text-white text-sm hover:text-indigo-600 hover:bg-white hover:duration-150">

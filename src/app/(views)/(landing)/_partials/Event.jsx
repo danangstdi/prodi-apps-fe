@@ -8,15 +8,20 @@ export default async function Event() {
     <section className='mt-10 lg:mt-0 lg:col-span-1'>
       <div className="flex justify-between">
         <h3 className='font-bold text-4xl'>Acara</h3>
+        {/* {events.data.data.length !== 0 && 
         <Link href='/news' className="border-2 border-indigo-600 py-2 px-6 text-indigo-600 text-sm hover:text-white hover:bg-indigo-600 hover:duration-150">
           Selengkapnya
-        </Link>
+        </Link>} */}
       </div>
       <div className='mt-3 mb-5'>
         <hr className='border-2 border-blue-800 w-1/3' />
         <hr className='border-2 border-blue-800' />
       </div>
-      {events.data.data.map((eventData) => (
+      {events.data.data.length === 0 
+      ? <div className="py-2 px-10 w-fit border-2 border-indigo-600 text-indigo-600 mx-auto mt-8">
+          Sedang tidak ada acara
+        </div>
+      : events.data.data.map((eventData) => (
         <Link href='' className="grid grid-cols-8 mt-1 w-full">
           <div className="col-span-2 text-center bg-gray-300 p-5 border-l-8 border-l-indigo-900">
             <p className="font-bold text-4xl">

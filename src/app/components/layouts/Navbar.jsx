@@ -11,7 +11,7 @@ export default function Navbar({active, imgServer}) {
 
   const listMenu = [
     {page: 'Beranda', link: '/'},
-    {page: 'Tentang Kami', link: '/biografi'},
+    {page: 'Tentang Kami', link: '/tentang-kami'},
     {page: 'Berita', link: '/semua-berita'},
     {page: 'Jurnal', link: '/semua-jurnal'},
     {page: 'Fasilitas', link: '/fasilitas'},

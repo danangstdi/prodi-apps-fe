@@ -15,28 +15,28 @@ export default async function page() {
           <div>
             <h5 className="text-2xl poppins-bold mb-3">Visi</h5>
             <p className="ml-10">
-              {config.vision || lorem}
+              {config && config.vision || lorem}
             </p>
           </div>
           <hr className="border-2"/>
           <div className="">
             <h5 className="text-2xl poppins-bold mb-3">Misi</h5>
             <div className="ml-10">
-              {config.mission || lorem}
+              {config && config.mission || lorem}
             </div>
           </div>
           <hr className="border-2"/>
           <div className="">
             <h5 className="text-2xl poppins-bold mb-3">Sejarah</h5>
             <div className="ml-10">
-              {config.history || lorem}
+              {config && config.history || lorem}
             </div>
           </div>
           <hr className="border-2"/>
           <div className="">
             <h5 className="text-2xl poppins-bold mb-3">Tujuan</h5>
             <div className="ml-10">
-              {config.goal || lorem}
+              {config && config.goal || lorem}
             </div>
           </div>
         </div>

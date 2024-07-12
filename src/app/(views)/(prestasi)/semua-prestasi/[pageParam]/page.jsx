@@ -1,27 +1,23 @@
 import Navbar from "@/app/components/layouts/Navbar";
-import { getArticle } from "@/app/services/getArticle";
 import Footer from "@/app/components/layouts/Footer";
-import Card from "../berita/_partials/Card";
 import Pagination from "@/app/components/partials/Pagination";
+import { getAchievement } from "@/app/services/getAchievement";
+import Card from "../../prestasi/_partials/Card";
 
-export default async function News() {
-  const allArticles = await getArticle();
+export default async function News({params: {pageParam}}) {
+  const allArticles = await getAchievement(`?page=${pageParam}`);
 
   return (
     <>
       <Navbar active="Berita"/>
       <main className="px-10 py-16">
-        <h3 className='font-bold text-4xl'>Semua Berita</h3>
+        <h3 className='font-bold text-4xl'>Semua Prestasi</h3>
         <div className='mt-3 mb-5'>
           <hr className='border-2 border-blue-800 w-1/5' />
           <hr className='border-2 border-blue-800' />
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 md:gap-4">
-          {allArticles.data.data.length === 0
-          ? <div className=" py-2 px-10 w-fit border-2 border-indigo-600 text-indigo-600 mx-auto mt-8">
-              Belum ada artikel yang diterbitkan !
-            </div>
-          : allArticles.data.data.map((article) => (
+          {allArticles.data.data.map((article) => (
             <Card
               href={article.url}
               img={article.thumbnail}
@@ -31,7 +27,7 @@ export default async function News() {
             />
           ))}
         </div>
-        <Pagination href='semua-berita' totalPages={allArticles.data.meta.last_page} currentPage={allArticles.data.meta.current_page} />
+        <Pagination href='semua-prestasi' totalPages={allArticles.data.meta.last_page} currentPage={allArticles.data.meta.current_page} />
       </main>
       <Footer/>
     </>

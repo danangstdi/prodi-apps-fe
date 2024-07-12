@@ -3,19 +3,26 @@ import Link from "next/link";
 
 export default async function Announcement() {
   const journals = await getJournal('?limit=4');
+
   return (
     <section className="lg:col-span-2">
       <div className="flex justify-between">
         <h3 className="font-bold text-4xl">Jurnal</h3>
-        <Link href='/semua-jurnal' className="border-2 border-indigo-600 py-2 px-6 text-indigo-600 text-sm hover:text-white hover:bg-indigo-600 hover:duration-150 lg:mr-10">
-          Selengkapnya
-        </Link>
+        {journals.data.data.length !== 0 &&
+          <Link href='/semua-jurnal' className="border-2 border-indigo-600 py-2 px-6 text-indigo-600 text-sm hover:text-white hover:bg-indigo-600 hover:duration-150 lg:mr-10">
+            Selengkapnya
+          </Link>
+        }
       </div>
       <div className="mt-3 mb-5">
         <hr className="border-2 border-blue-800 w-1/3 lg:mr-10" />
         <hr className="border-2 border-blue-800 lg:mr-10" />
       </div>
-      {journals.data.data.map((journal) => (
+      {journals.data.data.length === 0 
+      ? <div className="py-2 px-10 w-fit border-2 border-indigo-600 text-indigo-600 mx-auto mt-8">
+          Belum ada jurnal yang diunggah !
+        </div>
+      : journals.data.data.map((journal) => (
         <Link href={`/jurnal/${journal.url}`} key={journal.hash}>
           <article className="py-2 lg:pr-10 group">
             <h1 className="font-semibold text-sm line-clamp-1 group-hover:text-slate-700 group-hover:duration-150">
