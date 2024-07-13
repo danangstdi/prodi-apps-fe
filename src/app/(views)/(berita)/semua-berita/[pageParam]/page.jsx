@@ -17,15 +17,19 @@ export default async function News({params: {pageParam}}) {
           <hr className='border-2 border-blue-800' />
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 md:gap-4">
-          {allArticles.data.data.map((article) => (
-            <Card
-              href={article.url}
-              img={article.thumbnail}
-              title={article.title}
-              short={article.content.short}
-              created_at={article.created_at.full.split(',')[0]}
-            />
-          ))}
+          {allArticles.data.data.length === 0
+            ? <div className="col-span-4 py-2 px-10 w-fit border-2 border-indigo-600 text-indigo-600 mx-auto my-8">
+                Belum ada artikel yang diterbitkan !
+              </div>
+            : allArticles.data.data.map((article) => (
+              <Card
+                href={article.url}
+                img={article.thumbnail}
+                title={article.title}
+                short={article.content.short}
+                created_at={article.created_at.full.split(',')[0]}
+              />
+            ))}
         </div>
         <Pagination href='semua-berita' totalPages={allArticles.data.meta.last_page} currentPage={allArticles.data.meta.current_page} />
       </main>

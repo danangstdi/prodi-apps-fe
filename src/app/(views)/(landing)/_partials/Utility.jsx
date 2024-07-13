@@ -27,7 +27,7 @@ export default async function Utility() {
         <hr className='border-2 border-white w-1/6' />
         <hr className='border-2 border-white' />
       </div>
-      <div class="w-full rounded-md flex gap-1 my-14 h-[200px] md:h-[254px] lg:h-[400px]">
+      <div className="w-full rounded-md flex gap-1 my-14 h-[200px] md:h-[254px] lg:h-[400px]">
         {utilities.data.data.map((util) => (
           <div key={util.hash} className="group relative flex-[1] hover:flex-[4] transition-all duration-500 w-full overflow-hidden cursor-pointer rounded-sm bg-gray-500 flex justify-center items-center">
             <img src={util.thumbnail} className="w-full h-full object-cover" />

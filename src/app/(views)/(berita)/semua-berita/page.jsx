@@ -18,7 +18,7 @@ export default async function News() {
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 md:gap-4">
           {allArticles.data.data.length === 0
-          ? <div className=" py-2 px-10 w-fit border-2 border-indigo-600 text-indigo-600 mx-auto mt-8">
+          ? <div className="col-span-4 py-2 px-10 w-fit border-2 border-indigo-600 text-indigo-600 mx-auto my-8">
               Belum ada artikel yang diterbitkan !
             </div>
           : allArticles.data.data.map((article) => (
