@@ -12,7 +12,7 @@ export default async function Achievement() {
       <section className='px-5 py-14 xl:px-32'>
         <div className="flex items-center justify-between">
           <h3 className=' font-bold text-4xl'>Prestasi</h3>
-          {events.data.data.length !== 0 &&
+          {articles.data.data.length !== 0 &&
             <Link href='/semua-prestasi' className="border-2 border-indigo-600 text-indigo-600 py-2 px-6 text-sm hover:text-white hover:bg-indigo-600 hover:duration-150">
               Selengkapnya
             </Link>

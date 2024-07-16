@@ -5,7 +5,7 @@ import { getAchievement } from "@/app/services/getAchievement";
 import Card from "../prestasi/_partials/Card";
 
 export default async function Achievement() {
-  const allArticles = await getAchievement();
+  const allArticles = await getAchievement('?limit=4');
 
   return (
     <>

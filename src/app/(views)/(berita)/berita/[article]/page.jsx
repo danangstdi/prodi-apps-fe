@@ -39,7 +39,7 @@ export default async function Page({params: {article}}) {
         </main>
        {/* <Tag/> */}
       </main>
-      <section className='mt-10'>
+      <section className='my-10'>
         <div className='pt-20 px-4 md:mx-20 lg:mx-36 xl:mx-80 pb-20'>
           <h5 className='font-semibold text-xl mb-6'>Baca juga :</h5>
           <div className='grid md:grid-cols-2 md:gap-4'>
