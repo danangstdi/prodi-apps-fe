@@ -15,7 +15,7 @@ export default function Navbar({active, imgServer}) {
   const MoreMoU = data.slice(2)
 
   useEffect(() => {
-    fetch('http://prodi-apps.test/api/v2/achievement')
+    fetch('http://prodi-apps.test/api/v2/collaboration')
       .then((res) => res.json())
       .then((data) => {
         if (data.data) {
@@ -88,9 +88,9 @@ export default function Navbar({active, imgServer}) {
             </li>
           ))}
           <li className={`relative w-full mt-2 px-4 py-3 rounded-xl md:w-fit md:mt-0 md:px-0 md:py-0 md:rounded-none`}>
-              <button onClick={() => setIsOpenMore(!isOpenMore)} className={`text-slate-500 text-sm hover:text-blue-800 hover:duration-150`}>
-                Lainnya
-              </button>
+              {data.length > 2 && <button onClick={() => setIsOpenMore(!isOpenMore)} className={`text-slate-500 text-sm hover:text-blue-800 hover:duration-150`}>
+                          Lainnya
+                        </button>}
               <ul className={`${isOpenMore ? '' : 'hidden'} text-slate-500 border-2 border-slate-400 rounded-lg mt-2 hover:border-indigo-800 duration-200 md:absolute md:-left-12 md:z-30 md:bg-slate-50 md:border-none md:w-44 md:text-center md:shadow-lg md:bg-opacity-75`}>
               {MoreMoU.map((mou) => (
                 <li key={mou.hash} className={`${active == mou.url ? 'border-2 border-indigo-800 md:border-none' : ''} w-full my-2 px-4 rounded-xl md:w-full md:rounded-none`}>
